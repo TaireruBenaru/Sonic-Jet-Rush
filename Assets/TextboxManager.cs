@@ -163,6 +163,13 @@ public enum BustupNames
     SONIC_ANGRY,
     SONIC_SHRUG,
     SONIC_NORMAL,
+    TAILS_NORMAL,
+    TAILS_SAD,
+    TAILS_ANGRY,
+    AMY_NORMAL,
+    AMY_HAPPY,
+    AMY_SURPRISED,
+    AMY_ANGRY,
 }
 
 public enum SpeakerSide
