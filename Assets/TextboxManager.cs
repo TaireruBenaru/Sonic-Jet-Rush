@@ -50,28 +50,7 @@ public class TextboxManager : MonoBehaviour
     IEnumerator DialogueTest()
     {
         yield return new WaitForSeconds(2f);
-
-        ChangeBustup(BustupNames.SONIC_NORMAL, SpeakerSide.LEFT);
-        ChangeBustup(BustupNames.SONIC_NORMAL, SpeakerSide.RIGHT);
-
-        StartCoroutine(SlideBustup(true, SpeakerSide.LEFT));
-        ShowFletch(SpeakerSide.LEFT, true);
-
-        yield return StartCoroutine(SlideBustup(true, SpeakerSide.RIGHT));
-
-        yield return StartCoroutine(PushMessage(MessageNames.SONIC, "Hi Tails.", true));
-
-        ChangeBustup(BustupNames.SONIC_ANGRY, SpeakerSide.RIGHT);
-        ShowFletch(SpeakerSide.LEFT, false);
-        ShowFletch(SpeakerSide.RIGHT, true);
-
-        yield return StartCoroutine(PushMessage(MessageNames.TAILS, "Hi Sonic!!!!!!!!\nThis is...", true));
-
-        ChangeBustup(BustupNames.SONIC_SMUG, SpeakerSide.LEFT);
-        ChangeBustup(BustupNames.SONIC_SMUG, SpeakerSide.RIGHT);
-        ShowFletch(SpeakerSide.LEFT, true);
-
-        yield return StartCoroutine(PushMessage(MessageNames.SONICANDTAILS, "Sonic Rush!!", true));
+        yield return StartCoroutine(EventManager.Instance.S1_B_Z1_A1());
     }
 
     // Update is called once per frame
@@ -118,7 +97,13 @@ public class TextboxManager : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator SlideBustup(bool slideIn, SpeakerSide side)
+public void ToggleTextbox(bool show)
+{
+    textboxRenderer.enabled = show;
+    messageBox.enabled = show;
+    nameboxRenderer.enabled = show;
+}
+    public IEnumerator SlideBustup(bool slideIn, SpeakerSide side)
     {
         float[] inPos = new float[] { -5f, 5f };
         float[] outPos = new float[] { -15f, 15f };
@@ -135,12 +120,12 @@ public class TextboxManager : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
     }
 
-    void ChangeBustup(BustupNames bustup, SpeakerSide side)
+    public void ChangeBustup(BustupNames bustup, SpeakerSide side)
     {
         bustupRenderer[(int)side].sprite = bustupImages[(int)bustup];
     }
  
-    void ShowFletch(SpeakerSide side, bool show)
+    public void ShowFletch(SpeakerSide side, bool show)
     {
         fletchRenderer[(int)side].enabled = show;
     }
@@ -170,6 +155,7 @@ public enum BustupNames
     AMY_HAPPY,
     AMY_SURPRISED,
     AMY_ANGRY,
+    EGGMAN_NORMAL,
 }
 
 public enum SpeakerSide
