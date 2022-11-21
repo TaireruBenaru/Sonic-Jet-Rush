@@ -43,7 +43,7 @@ public enum ZoneAccessFlag
     CATHARTICJET,
     SPECIALSTAGE,
 }
-image.png
+
 public enum ActAccessFlag
 {
     //Event's before levels
