@@ -22,6 +22,19 @@ public class GameManager : MonoBehaviour
         ZoneAccessFlag.NULL,
         ZoneAccessFlag.SPECIALSTAGE
     };
+
+    public static GameManager Instance = null;
+
+    void Awake()
+    {
+        if (Instance != null) // meaning there's already an instance
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
     
     // Start is called before the first frame update
     void Start()
