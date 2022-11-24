@@ -86,7 +86,7 @@ public class TextboxManager : MonoBehaviour
         if(wait)
         {
             advancePrompt.enabled = true;
-            yield return new WaitUntil(() => InputManager.Instance.confirmButton);
+            yield return new WaitUntil(() => InputManager.Instance.aButton);
             advancePrompt.enabled = false;
         }
         else

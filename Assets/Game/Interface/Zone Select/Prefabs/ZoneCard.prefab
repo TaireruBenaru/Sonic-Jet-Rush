@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2513589839426314694}
   - component: {fileID: 3899647092015185063}
   m_Layer: 0
-  m_Name: Text
+  m_Name: BGText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 0}
+  m_AnchoredPosition: {x: 2.04, y: 0}
   m_SizeDelta: {x: 16, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &2513589839426314694
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Leaf Coast Zone
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f653919efe1887f48bb977597dd46e48, type: 2}
   m_sharedMaterial: {fileID: 1211741339023401627, guid: f653919efe1887f48bb977597dd46e48,
@@ -182,6 +182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3102292238715986145}
+  - component: {fileID: 8810676983769817693}
   m_Layer: 0
   m_Name: ZoneCard
   m_TagString: Untagged
@@ -204,8 +205,22 @@ Transform:
   - {fileID: 3102292238827221987}
   - {fileID: 3102292239344232487}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8810676983769817693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102292238715986142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aa82d5b502374b97923fbeef9a21872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgText: {fileID: 3102292239727517650}
+  cardText: {fileID: 3899647092015185063}
 --- !u!1 &3102292238827221984
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +403,7 @@ GameObject:
   - component: {fileID: 3102292239727517653}
   - component: {fileID: 3102292239727517650}
   m_Layer: 0
-  m_Name: Text
+  m_Name: CardText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -411,7 +426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: 0}
+  m_AnchoredPosition: {x: 8.05, y: 0}
   m_SizeDelta: {x: 4, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &3102292239727517653
@@ -476,7 +491,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Zone 1
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f653919efe1887f48bb977597dd46e48, type: 2}
   m_sharedMaterial: {fileID: 1211741339023401627, guid: f653919efe1887f48bb977597dd46e48,

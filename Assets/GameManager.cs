@@ -10,10 +10,23 @@ public class GameManager : MonoBehaviour
 
     public List<ZoneAccessFlag> unlockedZones;
     
-
+    public static string[] zoneNames = new string[]
+    {
+        "Leaf Coast",
+        "Centrium Turnpike",
+        "Ice Ridge",
+        "Ether Paradise",
+        "Marine Fleet",
+        "Doomsday Station",
+        "Cosmic Egg",
+        "NULL",
+        "UNDEFINED",
+        "Special"
+    }; 
     public static List<ZoneAccessFlag> sonicStages = new List<ZoneAccessFlag> 
     {
-        ZoneAccessFlag.LEAFCOAST,ZoneAccessFlag.CENTRIUMTURNPIKE,
+        ZoneAccessFlag.LEAFCOAST,
+        ZoneAccessFlag.CENTRIUMTURNPIKE,
         ZoneAccessFlag.ICERIDGE,
         ZoneAccessFlag.ETHERPARADISE,
         ZoneAccessFlag.MARINEFLEET,
