@@ -41,10 +41,10 @@ public class TextboxManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    IEnumerator Start()
+    void Start()
     {
         textboxRenderer = GetComponent<SpriteRenderer>();
-        yield return StartCoroutine(DialogueTest());
+        //yield return StartCoroutine(DialogueTest());
     }
 
     IEnumerator DialogueTest()

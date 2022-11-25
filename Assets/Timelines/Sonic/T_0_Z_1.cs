@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class T_0_Z_1 : MonoBehaviour
+public partial class TimelineManager
 {
-    // Start is called before the first frame update
-    void Start()
+    IEnumerator T_0_Z_1()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        yield return StartCoroutine(EventManager.Instance.S1_B_Z1_A1());
     }
 }
+

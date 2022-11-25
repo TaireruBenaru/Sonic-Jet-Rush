@@ -36,13 +36,13 @@ public class InputManager : MonoBehaviour
         downButton = Input.GetKeyDown(KeyCode.DownArrow);
         leftButton = Input.GetKeyDown(KeyCode.LeftArrow);
 
-        aButton = Input.GetKeyUp(KeyCode.Z);
-        bButton = Input.GetKeyUp(KeyCode.X);
+        aButton = Input.GetKeyDown(KeyCode.Z);
+        bButton = Input.GetKeyDown(KeyCode.X);
 
-        lButton = Input.GetKeyUp(KeyCode.A);
-        rButton = Input.GetKeyUp(KeyCode.S);
+        lButton = Input.GetKeyDown(KeyCode.A);
+        rButton = Input.GetKeyDown(KeyCode.S);
 
-        startButton = Input.GetKeyUp(KeyCode.Return);
-        selectButton = Input.GetKeyUp(KeyCode.Space);
+        startButton = Input.GetKeyDown(KeyCode.Return);
+        selectButton = Input.GetKeyDown(KeyCode.Space);
     }
 }

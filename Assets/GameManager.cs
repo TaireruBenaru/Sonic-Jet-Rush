@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public CharacterFlag Character;
-    public int[] Lives = new int[] { 3, 3 };
+    public CharacterFlag character;
+    public int[] lives = new int[] { 3, 3 };
 
     public List<ZoneAccessFlag> unlockedZones;
     
@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
     public void UnlockZone(ZoneAccessFlag Zone)
     {
         unlockedZones.Add(Zone);
-        switch (Character)
+        switch (character)
         {
             case CharacterFlag.SONIC:
                 unlockedZones = unlockedZones.OrderBy(s => sonicStages.IndexOf(s)).ToList();

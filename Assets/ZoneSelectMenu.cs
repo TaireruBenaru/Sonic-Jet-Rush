@@ -5,7 +5,7 @@ using TMPro;
 
 public class ZoneSelectMenu : MonoBehaviour
 {
-    int Selection;
+    int selection;
 
     public GameObject[] zoneCardObjects;
     public ZoneCard[] zoneCards;
@@ -17,6 +17,8 @@ public class ZoneSelectMenu : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         SetupZoneCards();
+        
+        yield return StartCoroutine(MainRoutine());
 
         yield return null;
     }
@@ -57,7 +59,10 @@ public class ZoneSelectMenu : MonoBehaviour
 
         while(InMenu)
         {
-            
+            if(InputManager.Instance.aButton)
+            {
+                yield return StartCoroutine(TimelineManager.Instance.PlayTimeline(selection));
+            }
             yield return null;
         }
         yield return null;
